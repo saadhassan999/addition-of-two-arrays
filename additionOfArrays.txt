@@ -1,0 +1,38 @@
+using System;
+using System.Collections;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] array1 = new int[5];
+            int num1 = 0, num2 = 0, size = 0, values = 0;
+            ArrayList array2 = new ArrayList();
+
+            Console.WriteLine("enter values for static array");
+            for (int i = 0; i < array1.Length; i++)
+            {
+                array1[i] = Convert.ToInt32(Console.ReadLine());
+                num1 += array1[i];
+            }
+            //Console.WriteLine("sum of array1 values are : " + num1);
+
+            Console.WriteLine("enter the size of dynamic array");
+            size = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter values for dynamic array");
+            for (int i = 0; i < size; i++)
+            {
+                values = Convert.ToInt32(Console.ReadLine());
+                array2.Add(values);
+                num2 += values;
+            }
+            int res = num1+num2;
+            Console.WriteLine("sum of values of two array are : " + res );
+
+
+            Console.ReadKey();
+        }
+    }
+}
